@@ -220,7 +220,7 @@ switch(s6){
         break;
 }
 //Crea un bloque de código que tome de referencia una letra. Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
-let s10 = "u"
+let s10 = "¡"
 switch (s10){
     case "a":
         console.log("Es vocal")
@@ -307,7 +307,22 @@ switch (s10){
     default:
         console.log("Es un caracter especial")
 }
-
+//Crea un bloque de código que tome de referencia un número del 1 al 4. Utiliza switch para imprimir en consola la estación del año correspondiente.
+let n27 = 2
+switch(n27){
+    case 1:
+        console.log("Verano")
+        break
+    case 2:
+        console.log("Otoño")
+        break
+    case 3:
+        console.log("Invierno")
+        break
+    case 4:
+        console.log("Primavera")
+        break
+}
 //Crea un bloque de código que tome de referencia una variable ‘edad’. Utiliza el operador ternario para imprimir en consola si es o no mayor de edad.
 let edad = 17
 console.log(edad >= 18 ? "Es mayor de edad" : "Es menor de edad")
