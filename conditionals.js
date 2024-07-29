@@ -232,23 +232,11 @@ switch(n15){
         console.log("Tres");
         break;
     case 4:
-        console.log("Mayor a 3");
-        break;
     case 5:
-        console.log("Mayor a 3");
-        break;
     case 6:
-        console.log("Mayor a 3");
-        break;
     case 7:
-        console.log("Mayor a 3");
-        break;
     case 8:
-        console.log("Mayor a 3");
-        break;
     case 9:
-        console.log("Mayor a 3");
-        break;
     case 10:
         console.log("Mayor a 3");
         break;
@@ -257,87 +245,36 @@ switch(n15){
 let s10 = "¡"
 switch (s10){
     case "a":
-        console.log("Es vocal")
-        break
     case "e":
-        console.log("Es vocal")
-        break
     case "i":
-        console.log("Es vocal")
-        break
     case "o":
-        console.log("Es vocal")
-        break
     case "u":
         console.log("Es vocal")
-        break
-
+        break;
     case "b":
-        console.log("Es consonante")
-        break
     case "c":
-        console.log("Es consonante")
-        break
     case "d":
-        console.log("Es consonante")
-        break
     case "f":
-        console.log("Es consonante")
-        break
     case "g":
-        console.log("Es consonante")
-        break
     case "h":
-        console.log("Es consonante")
-        break
     case "j":
-        console.log("Es consonante")
-        break
     case "k":
-        console.log("Es consonante")
-        break
     case "l":
-        console.log("Es consonante")
-        break
     case "m":
-        console.log("Es consonante")
-        break
     case "n":
-        console.log("Es consonante")
-        break
     case "ñ":
-        console.log("Es consonante")
-        break
     case "p":
-        console.log("Es consonante")
-        break
     case "q":
-        console.log("Es consonante")
-        break
     case "r":
-        console.log("Es consonante")
-        break
     case "s":
-        console.log("Es consonante")
-        break
     case "t":
-        console.log("Es consonante")
-        break
     case "v":
-        console.log("Es consonante")
-        break
     case "w":
-        console.log("Es consonante")
-        break
     case "x":
-        console.log("Es consonante")
-        break
     case "y":
-        console.log("Es consonante")
-        break
     case "z":
         console.log("Es consonante")
-        break
+        break;
     default:
         console.log("Es un caracter especial")
 }
