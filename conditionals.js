@@ -219,6 +219,40 @@ switch(s6){
         console.log("Mujer");
         break;
 }
+//
+let n28 = 4
+switch(n15){
+    case 1:
+        console.log("Uno");
+        break;
+    case 2:
+       console.log("Dos");
+       break;
+    case 3:
+        console.log("Tres");
+        break;
+    case 4:
+        console.log("Mayor a 3");
+        break;
+    case 5:
+        console.log("Mayor a 3");
+        break;
+    case 6:
+        console.log("Mayor a 3");
+        break;
+    case 7:
+        console.log("Mayor a 3");
+        break;
+    case 8:
+        console.log("Mayor a 3");
+        break;
+    case 9:
+        console.log("Mayor a 3");
+        break;
+    case 10:
+        console.log("Mayor a 3");
+        break;
+}
 //Crea un bloque de código que tome de referencia una letra. Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
 let s10 = "¡"
 switch (s10){
