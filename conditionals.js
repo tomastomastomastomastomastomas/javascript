@@ -58,7 +58,7 @@ else{
 //Crea una función que tome de referencia una variable string cuyo valor sea una letra, y luego imprima en consola si es una vocal o una consonante.
 let s9 = "z"
 function f1(s){
-    if (s.toLowerCase() === "a" || s === "e" || s.toLowerCase() === "i" || s.toLowerCase() === "o" || s.toLowerCase() === "u"){
+    if (s === "a" || s === "e" || s === "i" || s === "o" || s === "u"){
         console.log("Es vocal")
     }
     else{
@@ -213,8 +213,8 @@ switch(s6){
         console.log("No binario?");
         break;
     case "H":
-       console.log("Hombre");
-       break;
+        console.log("Hombre");
+        break;
     case "M":
         console.log("Mujer");
         break;
@@ -312,7 +312,7 @@ let n20 = 2
 console.log(n20 < 0 ? "Es negativo" : n20 > 0 ? "Es positivo" : "Es cero")
 //Crea un bloque de código que tome de referencia un número del 1 al 100 y utilice el operador ternario para determinar si es múltiplo de 3 y 5 para imprimir el resultado en consola.
 let n21 = 3
-console.log(n21 >= 1 && n21 <= 100 ? n21 % 3 === 0 ? "Es divisible por 3" : n21 % 5 === 0 ? "Es divisble por 5" : "No es divisible" : "No es un numero valido")
+console.log(n21 >= 1 && n21 <= 100 ? n21 % 3 === 0 && n21 % 5 === 0 ? "Es divisble por 3 y por 5" : "No es divisible" : "No es un numero valido")
 
 //Crea un bloque de código que tome de referencia un número del 1 al 100 y, utilizando el tipo de condicional que prefieras, imprimir si es múltiplo de 2, 3 o 5 incluyendo las diferentes combinaciones posibles.
 let n22 = 10
@@ -361,3 +361,4 @@ else{
     s8 = "No es un numero valido"
 }
 console.log(s8)
+//Desarrolla 10 nuevas situaciones en donde requieras de utilizar condicionales para su resolución.
