@@ -1,5 +1,5 @@
 function manageOrder(name, age, quantity, price, method) {
-  console.log(greetCustomer(name));
+  greetCustomer(name);
   let warning = verifyAge(age);
   if (warning) {
     console.log("Usted no puede consumir bebidas alcohólicas");
@@ -13,10 +13,10 @@ function manageOrder(name, age, quantity, price, method) {
   let discountCost = cost * discount;
   tax = applyTax(cost - discountCost);
   let total = cost - discountCost + tax;
-  console.log(showSummary(cost, discount, discountCost, tax, total));
+  showSummary(cost, discount, discountCost, tax, total);
 }
 function greetCustomer(name) {
-  return "Hola " + name + "!";
+  console.log("Hola " + name + "!");
 }
 function verifyAge(age) {
   return age < 18 ? true : false;
@@ -38,19 +38,19 @@ function applyTax(total) {
   return total * 0.05;
 }
 function showSummary(cost, discount, discountCost, tax, total) {
-  return (
+  console.log(
     "Costo del producto: " +
-    cost +
-    "\nDescuento: " +
-    discount +
-    "%" +
-    "\nDescuento del costo: " +
-    discountCost +
-    "\nCosto decontado: " +
-    (cost - discountCost) +
-    "\nImpuesto del 5%: " +
-    tax +
-    "\nCosto total: " +
-    total
+      cost +
+      "\nDescuento: " +
+      discount +
+      "%" +
+      "\nDescuento del costo: " +
+      discountCost +
+      "\nCosto decontado: " +
+      (cost - discountCost) +
+      "\nImpuesto del 5%: " +
+      tax +
+      "\nCosto total: " +
+      total
   );
 }
