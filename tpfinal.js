@@ -1,19 +1,19 @@
 function manageOrder() {
   let name = prompt("Ingrese su nombre: ");
   console.log(name);
-  let isName = verifyName(name);
+  let isName = verifyName(name.trim());
   while (!isName) {
     name = prompt("Ingrese su nombre: ");
     console.log(name);
-    isName = verifyName(name);
+    isName = verifyName(name.trim());
   }
   greetCustomer(name);
   let age = prompt("Ingrese su edad: ");
-  console.log(age);
+  console.log(age.trim());
   let isAge = verifyAge(age);
   while (!isAge) {
     age = prompt("Ingrese su edad: ");
-    console.log(age);
+    console.log(age.trim());
     isAge = verifyAge(age);
   }
   let warning = verifyAdult(age);
@@ -22,20 +22,20 @@ function manageOrder() {
   }
 
   let product = prompt("Ingrese el producto: ");
-  console.log(product);
+  console.log(product.trim());
   let price = verifyProduct(product);
   while (price == 0) {
     product = prompt("Ingrese el producto: ");
-    console.log(product);
+    console.log(product.trim());
     price = verifyProduct(product);
   }
 
   let quantity = prompt("Ingrese la cantidad: ");
-  console.log(quantity);
+  console.log(quantity.trim());
   let isQuantity = verifyQuantity(quantity);
   while (!isQuantity) {
     quantity = prompt("Ingrese la cantidad: ");
-    console.log(quantity);
+    console.log(quantity.trim());
     isQuantity = verifyQuantity(quantity);
   }
 
@@ -44,7 +44,7 @@ function manageOrder() {
 
   let method = prompt("Ingrese el metodo de pago ( E - T - A ):");
   let isMethod = verifyPaymentMethod(method);
-  console.log(method);
+  console.log(method.trim());
   if (isMethod) {
     discount = paymentMethod(method, discount);
   }
