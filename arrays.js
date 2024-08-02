@@ -24,3 +24,29 @@ fruits.shift();
 colors.push("yellow");
 
 colors.shift();
+
+function function1(name, notes, aprovedNote) {
+  disapproved = notes.filter(function (note) {
+    return note < aprovedNote;
+  });
+  approved = notes.filter(function (note) {
+    return note >= aprovedNote;
+  });
+  note10 = notes.includes(10);
+  scratchingNote = notes.includes(aprovedNote);
+  console.log(name);
+  console.log("Cantidad de materias " + notes.length);
+  console.log("Materias aprovadas " + approved.length);
+  console.log("Notas de las aprovadas " + approved);
+  console.log("Materias desaprovadas " + disapproved.length);
+  console.log("Notas de las desaprovadas " + disapproved);
+  console.log(
+    note10 ? "El alumno tuvo algun 10" : "El alumno no tuvo ningun 10"
+  );
+  console.log(
+    scratchingNote
+      ? "Aprovo alguna raspando"
+      : "No hubo ningun caso donde haya aprovado raspando"
+  );
+  console.log(disapproved.length > 0 ? "No paso de año" : "Paso de año");
+}
