@@ -139,3 +139,18 @@ console.log(
     return edad >= 13 && edad <= 17;
   })
 );
+//
+let arrayGrande = [
+  "uno",
+  "dos",
+  "tres",
+  "cuatro",
+  "cinco",
+  "seis",
+  "siete",
+  "ocho",
+  "nueve",
+  "diez",
+];
+let [, dos, , , , seis, siete, , , diez] = arrayGrande;
+console.log(dos + seis + siete + diez);
