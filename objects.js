@@ -17,7 +17,7 @@ function existeEdad(personaje) {
 
 function existeAliado(personaje) {
   if (personaje.aliado) {
-    return personaje.aliado.length > 10;
+    return personaje.aliado.length == 10;
   }
 }
 
@@ -61,10 +61,7 @@ function crearHabilidad(personaje, nuevaHabilidad) {
   let existeHabilidad = personaje.habilidades.some(function (habilidad) {
     return habilidad === nuevaHabilidad;
   });
-  if (!existeHabilidad) {
-    personaje.habilidades.push(nuevaHabilidad);
-  }
-  return personaje;
+  return existeHabilidad;
 }
 
 function cantidadHabilidades(personaje) {
