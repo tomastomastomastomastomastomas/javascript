@@ -142,7 +142,7 @@ let events = {
       name: "shrek",
       confirm: false,
     }),
-    (member2 = {
+    (guest2 = {
       name: "fiona",
       confirm: true,
     }),
@@ -205,4 +205,130 @@ function addMission(couple) {
 }
 function checkAge({ ogreAge, princessAge }) {
   return ogreAge > 18 || princessAge > 18;
+}
+
+let character12 = {
+  name: "character1",
+  kingdom: "reino1",
+};
+let character13 = {
+  name: "character2",
+  kingdom: "Pantano",
+};
+let characters3 = [character12, character13];
+function joinCharacters(characters) {
+  characterNames = getValues(characters, "name");
+  characterKingdom = getValues(characters, "kingdom");
+  let alliance = {
+    characterNames,
+    characterKingdom,
+  };
+  if (existSwamp(characters)) {
+    alliance.importantPlaces = ["Pantano"];
+  }
+  return alliance;
+}
+function getValues(characters, property) {
+  let array = [];
+  characters.map(function (character) {
+    array.push(character[property]);
+  });
+  return array;
+}
+function existSwamp(characters) {
+  return characters.some(function (character) {
+    console.log(character.kingdom);
+    return character.kingdom == "Pantano";
+  });
+}
+
+let characters4 = [
+  { info: { name: "Shrek", age: 35, kingdom: "Pantano" } },
+  { info: { name: "Fiona", age: 28, kingdom: "Duloc" } },
+  { info: { name: "Rey Harold", age: 45, kingdom: "Far Far Away" } },
+];
+function summarizeCharacter(characters) {
+  let summaryNames = getInfoValues(characters);
+  let sumamryOldPeople = getOldPeople(characters, 30);
+  let summary = {
+    summaryNames,
+    sumamryOldPeople,
+  };
+  if (IsVeryOld(characters, 40)) {
+    summary.categories = ["mayores de 40"];
+  }
+  return summary;
+}
+function getInfoValues(characters) {
+  let array = [];
+  characters.map(function (character) {
+    array.push(character.info.name);
+  });
+  return array;
+}
+function getOldPeople(characters, age) {
+  let array = [];
+  characters.map(function (character) {
+    if (character.info.age > age) {
+      array.push(character.info.age);
+    }
+  });
+  return array;
+}
+function IsVeryOld(characters, age) {
+  return characters.some(function (character) {
+    return character.info.age > age;
+  });
+}
+
+let person = {
+  name: "persona1",
+  age: 20,
+  hobbies: ["hobbie1", "hobbie2"],
+};
+let newHobbies = {
+  hobbies: ["hobbienuevo1", "hobbienuevo2"],
+};
+function addHobbie(person, newHobbies) {
+  let updatedPerson = {
+    ...person,
+    newHobbies: [...person.hobbies, ...newHobbies.hobbies],
+  };
+  return updatedPerson;
+}
+
+let personalData = {
+  name: "nombre",
+  age: 20,
+};
+let contactData = {
+  adress: "aca",
+  number: "11 ",
+};
+function updatedData(personalData, contactData) {
+  return { ...personalData, ...contactData };
+}
+
+let vehicles = {
+  brand: "marca1",
+  model: "model1",
+};
+let features = {
+  type: "tipo1",
+  color: "colro1",
+};
+function addFeatures(vehicle, features) {
+  return features.color == "rojo"
+    ? { ...vehicle }
+    : { ...vehicles, ...features };
+}
+
+let person1 = {
+  name: "persona1",
+  number: 2,
+  adress: "aca",
+};
+function deleteNumber(p) {
+  let { number, ...rest } = p;
+  return rest;
 }
