@@ -332,3 +332,77 @@ function deleteNumber(p) {
   let { number, ...rest } = p;
   return rest;
 }
+
+let character14 = {
+  name: "nombre1",
+  skills: ["habilidades1", "habilidades2"],
+};
+let character15 = {
+  name: "nombre1",
+  atributes: { strength: "mu fuerte", info: "mu fuerte" },
+};
+function combinationCharacter(character1, character2) {
+  let { name, ...information } = { ...character1, ...character2 };
+  return { name: character1.name, information };
+}
+
+let client1 = {
+  name: "cliente1",
+  data: {
+    age: 20,
+    adress: "aca",
+  },
+};
+let client2 = {
+  name: "cliente2",
+  information: {
+    number: "1234",
+    email: "emailwow.com",
+  },
+};
+function combinationClient(client1, client2) {
+  let { name, ...completeInformation } = { ...client1, ...client2 };
+  return { name: character1.name, completeInformation };
+}
+
+let user = {
+  name: "nombre",
+  age: 20,
+  favouriteColor: "a",
+};
+let details = {
+  adress: "aca",
+  number: "1234",
+};
+function updateProfile(user, details) {
+  let { favouriteColor, ...newUser } = { ...user, ...details };
+  if (user.favouriteColor == "morado") {
+    newUser.favouriteColor = "morado";
+  }
+  if (user.age < 25) {
+    newUser.adress = "default";
+    newUser.number = "default";
+  }
+  return newUser;
+}
+
+let user1 = {
+  name: "nombre",
+  age: 20,
+  favouriteColor: "a",
+};
+let details1 = {
+  adress: "aca",
+  number: "1234",
+  occupation: "ocupado",
+};
+function updateProfile(user, details, keyWords) {
+  let { favouriteColor, ...newUser } = { ...user, ...details };
+  let isFavouriteColor = keyWords.includes(favouriteColor);
+  if (!isFavouriteColor) {
+    newUser.adress = "default";
+    newUser.number = "default";
+    newUser.occupation = "default";
+  }
+  return newUser;
+}
