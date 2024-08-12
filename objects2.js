@@ -89,9 +89,76 @@ function existColor(color, valor, colors) {
     keys.push(Object.keys(col));
     values.push(Object.values(col));
   });
-  console.log(keys);
-  console.log(values);
+  let isKey = keys.some(function (key) {
+    return key[0] == valor;
+  });
+  let isValue = values.some(function (value) {
+    return value[0] == color;
+  });
+  return isValue && isKey;
+}
 
-  if (keys.includes(valor) && true) {
-  }
+let team1WithoutRepeated = [
+  "Harry Potter",
+  "Hermione Granger",
+  "Ron Weasley",
+  "Draco Malfoy",
+  "Neville Longbottom",
+  "Luna Lovegood",
+  "Ginny Weasley",
+  "Severus Snape",
+  "Sirius Black",
+  "Remus Lupin",
+];
+
+let team2WithoutRepeated = [
+  "Luna Lovegood",
+  "Draco Malfoy",
+  "Harry Potter",
+  "Gilderoy Lockhart",
+  "Sirius Black",
+  "Albus Dumbledore",
+  "Minerva McGonagall",
+  "Hermione Granger",
+  "Ron Weasley",
+  "Rubeus Hagrid",
+];
+
+let wizards = {
+  team1,
+  team2,
+};
+
+function formTeams(wizards) {
+  teams = Object.values(wizards);
+  let repeated = [];
+  let team1WithoutRepeated = [];
+  let team2WithoutRepeated = [];
+  teams[0].map(function (team) {
+    if (teams[1].includes(team)) {
+      repeated.push(team);
+    } else {
+      team1WithoutRepeated.push(team);
+    }
+  });
+
+  teams[1].map(function (team) {
+    if (!teams[0].includes(team)) {
+      team2WithoutRepeated.push(team);
+    }
+  });
+  return {
+    team1WithoutRepeated,
+    team2WithoutRepeated,
+    repeated,
+  };
+}
+
+let studentsGrades = { Jhon: 85, Jane: 92, Jim: 78, Jil: 88 };
+function filterByKey(studentsGrades, key) {
+  return studentsGrades[key]
+    ? {
+        [key]: studentsGrades[key],
+      }
+    : "No se ha encontrado la key";
 }
