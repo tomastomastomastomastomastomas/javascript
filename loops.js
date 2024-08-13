@@ -1,7 +1,9 @@
 function sumarHastaLimite(limite) {
   let suma = 0;
+  let cont = 1;
   while (suma < limite) {
-    suma = suma + 1;
+    suma = suma + cont;
+    cont++;
   }
   return suma;
 }
@@ -29,7 +31,7 @@ function multiplicar(a, b) {
     a = a + a;
     b -= 1;
   }
-  return (negativo = true ? a * -1 : a);
+  return negativo ? a * -1 : a;
 }
 
 function mostrarImpares(n) {
@@ -68,7 +70,6 @@ function sumarDigitos(n) {
   let sum = 0;
   while (n > 1) {
     n = parseInt(n);
-    sum = parseInt(sum);
     sum += n % 10;
     n /= 10;
   }
@@ -96,6 +97,5 @@ function encontrarNumerosImpares() {
     n % 2 == 0 ? par.push(n) && cantPar++ : impar.push(n) && cantImpar++;
     n++;
   } while (n < 21);
-  console.log(par + " " + impar);
-  console.log(cantPar + " " + cantImpar);
+  return par + " " + impar + " " + cantPar + " " + cantImpar;
 }
