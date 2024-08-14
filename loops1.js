@@ -60,18 +60,23 @@ function esPrimo(numero) {
     return false;
   }
   do {
-    if (numero % i == 0 && i != numero && i != 1) {
+    if (numero % i == 0 && i != numero) {
       esPrimo = false;
     }
     i++;
-  } while (i == numero);
+  } while (i < numero);
   return esPrimo;
 }
 
 function contarComentarios(comentarios) {
   let i = 0;
+  let cont = 0;
   while (i < comentarios.length) {
+    if (typeof comentarios[i] == "string") {
+      cont++;
+    }
     i++;
   }
-  return i;
+  return cont;
 }
+let comentarios = ["hola", "chay", 2, "tres"];
