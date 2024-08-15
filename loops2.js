@@ -111,7 +111,7 @@ function validarEntradas(datosIngresados) {
   do {
     if (
       !(
-        datosIngresados[i] != "" &&
+        trim(datosIngresados[i]) != "" &&
         datosIngresados[i] != undefined &&
         datosIngresados[i] != null
       )
