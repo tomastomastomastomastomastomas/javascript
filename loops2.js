@@ -105,19 +105,19 @@ function calcularTotal(productos) {
   return precios;
 }
 
-let datosIngresados = [2, "  ", "a", "h", "ada"];
+let datosIngresados = [2, , "a", "h", "ada"];
 function validarEntradas(datosIngresados) {
   let i = 0;
   do {
-    if (
-      !(
-        typeof datosIngresados[i] == "number" &&
-        datosIngresados[i] != undefined &&
-        datosIngresados[i] != null &&
-        datosIngresados[i].trim() != ""
-      )
-    ) {
-      return "Formulario inválido";
+    if (typeof datosIngresados[i] != "number") {
+      if (
+        !(
+          typeof datosIngresados[i] == "string" &&
+          datosIngresados[i].trim() != ""
+        )
+      ) {
+        return "Esta mal";
+      }
     }
     i++;
   } while (i < datosIngresados.length);
