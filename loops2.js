@@ -91,16 +91,71 @@ function analizarRendimiento(rendimiento) {
   return jugadores;
 }
 
-function resumenTarjetas(tarjetasPartido) {
-  do {} while (true);
+let productos = [
+  { nombre: "producto1", precio: 200 },
+  { nombre: "producto2", precio: 500 },
+];
+function calcularTotal(productos) {
+  let i = 0;
+  let precios = 0;
+  while (i < productos.length) {
+    precios += productos[i].precio;
+    i++;
+  }
+  return precios;
 }
-let tarjetasPartido = {
-  messi: {
-    amarilla: 2,
-    roja: 1,
-  },
-  diMaria: {
-    amarilla: 1,
-    roja: 0,
-  },
-};
+
+let datosIngresados = [1, 2, , 23, "ada"];
+function validarEntradas(datosIngresados) {
+  let i = 0;
+  do {
+    if (
+      !(
+        datosIngresados[i] != "" &&
+        datosIngresados[i] != undefined &&
+        datosIngresados[i] != null
+      )
+    ) {
+      return "Formulario inválido";
+    }
+    i++;
+  } while (i < datosIngresados.length);
+  return "Formulario válido";
+}
+
+let comentarios = [
+  { usuario: "usuario1", comentario: "CHAY" },
+  { usuario: "usuario2", comentario: "hola" },
+];
+function mostrarComentarios(comentarios) {
+  let i = 0;
+  while (i < comentarios.length) {
+    console.log(comentarios[i].comentario);
+    i++;
+  }
+}
+
+function simularProgreso() {
+  let i = 0;
+  while (i <= 100) {
+    console.log("Progreso: " + i + "%");
+    i += 10;
+  }
+}
+
+let productos1 = [
+  { nombre: "nombre1", precio: 1, categoria: "1" },
+  { nombre: "nombre2", precio: 2, categoria: "2" },
+  { nombre: "nombre3", precio: 3, categoria: "1" },
+];
+function filtrarPorCategoria(productos, categoria) {
+  let i = 0;
+  let filtro = [];
+  while (i < productos.length) {
+    if (productos[i].categoria == categoria) {
+      filtro.push(productos[i]);
+    }
+    i++;
+  }
+  return filtro;
+}
