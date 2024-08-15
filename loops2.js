@@ -105,15 +105,16 @@ function calcularTotal(productos) {
   return precios;
 }
 
-let datosIngresados = [1, 2, , 23, "ada"];
+let datosIngresados = [2, "  ", "a", "h", "ada"];
 function validarEntradas(datosIngresados) {
   let i = 0;
   do {
     if (
       !(
-        trim(datosIngresados[i]) != "" &&
+        typeof datosIngresados[i] == "number" &&
         datosIngresados[i] != undefined &&
-        datosIngresados[i] != null
+        datosIngresados[i] != null &&
+        datosIngresados[i].trim() != ""
       )
     ) {
       return "Formulario inválido";
