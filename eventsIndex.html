@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio</title>
+  </head>
+  <body>
+    <button id="show-message"></button>
+    <input type="color" class="color" />
+    <p class="click-text">hola</p>
+    <input type="text" class="input2" />
+    <form action="" class="form1">
+      <input type="text" id="form1input1" />
+      <input type="text" id="form1input2" />
+      <input type="submit" />
+    </form>
+    <button id="add-item">add item</button>
+    <ul id="items">
+      <li></li>
+      <li></li>
+    </ul>
+    <form action="" id="contact-form">
+      <input type="submit" />
+    </form>
+    <button class="count-button">contar</button>
+    <span id="click-count">0</span>
+    <form action="" id="email-form">
+      <input type="text" id="email-input" />
+      <input type="submit" />
+    </form>
+    <button id="toggle-content">mostrar/ocultar</button>
+    <div class="content-box">hola</div>
+    <a class="no-default" href="otro">google</a>
+    <button id="add-class">botom</button>
+    <p class="text"></p>
+    <button id="toggle-text">botno</button>
+    <p class="text-toggle">text1</p>
+    <button id="add-html">boton</button>
+    <div class="container"></div>
+    <button id="create-element">botonono</button>
+    <div class="content"></div>
+    <ul>
+      <li class="color-list">a</li>
+      <li class="color-list">a</li>
+      <li class="color-list">a</li>
+    </ul>
+    <button id="change-color">cambiar color</button>
+    <button id="create-list">crear lista</button>
+    <div id="resize-image" class="box"></div>
+  </body>
+  <style>
+    .highlight {
+      width: 300px;
+      height: 300px;
+      background-color: black;
+    }
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: black;
+    }
+  </style>
+  <script>
+    let button1 = document.getElementById("show-message");
+    button1.addEventListener("click", function () {
+      alert("tocaste el botonsito");
+    });
+
+    let body = document.querySelector("body");
+    let input1 = document.querySelector(".color");
+    input1.addEventListener("change", function (event) {
+      body.style.backgroundColor = event.target.value;
+    });
+
+    let p1 = document.querySelector(".click-text");
+    p1.addEventListener("click", function () {
+      p1.textContent = "clickeaste aca";
+    });
+
+    let input2 = document.querySelector(".input2");
+    input2.addEventListener("keydown", function (event) {
+      p1.textContent = event.target.value;
+    });
+
+    let form1 = document.querySelector(".form1");
+    let f1inp1 = document.getElementById("form1input1");
+    let f1inp2 = document.getElementById("form1input2");
+    form1.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (f1inp1.value == "" || f1inp2.value == "") {
+        alert("no completaste el formulario");
+      } else {
+        form1.submit();
+      }
+    });
+
+    window.addEventListener("load", function () {
+      console.log("la paginas se ha cargado");
+    });
+
+    let items = document.getElementById("items");
+    let button = document.getElementById("add-item");
+    button.addEventListener("click", function () {
+      let li = document.createElement("li");
+      li.textContent = "Nuevo item";
+      items.append(li);
+    });
+
+    let form2 = document.getElementById("contact-form");
+    form2.addEventListener("submit", function (event) {
+      event.preventDefault();
+      alert("El envío del formulario ha sido detenido");
+    });
+
+    let button2 = document.querySelector(".count-button");
+    let span1 = document.getElementById("click-count");
+    let a = 0;
+    button2.addEventListener("click", function () {
+      a++;
+      span1.textContent = a;
+    });
+
+    let form3 = document.getElementById("email-form");
+    let input3 = document.getElementById("email-input");
+    form3.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (input3.value != "" && input3.value.includes("@")) {
+        form3.submit();
+      } else {
+        alert("mail incorrecto");
+      }
+    });
+
+    let button3 = document.getElementById("toggle-content");
+    let div1 = document.querySelector(".content-box");
+    button3.addEventListener("click", function () {
+      if (div1.style.display == "none") {
+        div1.style.display = "block";
+      } else {
+        div1.style.display = "none";
+      }
+    });
+
+    let a1 = document.querySelector(".no-default");
+    a1.addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+
+    let button4 = document.getElementById("add-class");
+    let p2 = document.querySelector(".text");
+    button4.addEventListener("click", function () {
+      p2.classList.add("highlight");
+    });
+
+    let button5 = document.getElementById("toggle-text");
+    let p3 = document.querySelector(".text-toggle");
+    button5.addEventListener("click", function () {
+      if (p3.textContent == "text1") {
+        p3.textContent = "text2";
+      } else {
+        p3.textContent = "text1";
+      }
+    });
+
+    let button6 = document.getElementById("add-html");
+    let div2 = document.querySelector(".container");
+    button6.addEventListener("click", function () {
+      div2.innerHTML = "<div></div>";
+    });
+
+    let button7 = document.getElementById("create-element");
+    let div3 = document.querySelector(".content");
+    button7.addEventListener("click", function () {
+      div3.innerHTML = "<p>Elemento creado</p>";
+    });
+
+    let lis = document.querySelectorAll(".color-list");
+    let button8 = document.getElementById("change-color");
+    button8.addEventListener("click", function () {
+      lis.forEach(function (li) {
+        console.log(li);
+        li.style.backgroundColor = "red";
+      });
+    });
+
+    let button9 = document.getElementById("create-list");
+    button9.addEventListener("click", function () {
+      let ul1 = document.createElement("ul");
+      for (let i = 0; i < 5; i++) {
+        let li1 = document.createElement("li");
+        ul1.append(li1);
+      }
+      body.append(ul1);
+    });
+
+    let div4 = document.getElementById("resize-image");
+    div4.addEventListener("click", function () {
+      div4.style.width = "600px";
+      div4.style.width = "150px";
+      div4.style.backgroundColor = "green";
+    });
+  </script>
+</html>
