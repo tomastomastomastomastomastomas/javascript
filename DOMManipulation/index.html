@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark">
+    <header>
+      <h1>To-Do list</h1>
+    </header>
+    <main>
+      <div id="list-container">
+        <div id="first-list-container">
+          <span>First list</span>
+          <ul id="first-list"></ul>
+          <input placeholder="To-do" type="text" id="first-input" />
+          <button id="first-add-button">Add</button>
+        </div>
+        <div id="second-list-container">
+          <span>Second list</span>
+          <ul id="second-list"></ul>
+          <input placeholder="To-do" type="text" id="second-input" />
+          <button>Add</button>
+        </div>
+        <button id="delete-button">Delete</button>
+      </div>
+      <button id="toggle-button">Dark Mode</button>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

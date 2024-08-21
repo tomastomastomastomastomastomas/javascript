@@ -1,0 +1,54 @@
+#list-container {
+  display: flex;
+  align-items: start;
+  gap: 100px;
+  justify-content: center;
+}
+li {
+  list-style: none;
+  display: flex;
+}
+input {
+  border: 0;
+}
+
+button {
+  border-style: solid;
+  border-radius: 5px;
+}
+
+#first-list {
+  padding-left: 0;
+}
+#second-list {
+  padding-left: 0;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#delete-button {
+  display: none;
+  position: relative;
+  right: 0;
+}
+
+.dark {
+  background-color: rgb(29, 28, 28);
+  color: rgb(221, 221, 221);
+}
+.dark input {
+  color: white;
+  background-color: rgb(29, 28, 28);
+}
+.dark button {
+  background-color: rgb(29, 28, 28);
+  border-color: white;
+  color: white;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
