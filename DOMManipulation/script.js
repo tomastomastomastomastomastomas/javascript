@@ -17,6 +17,22 @@ let items = [
   ["hola"],
 ];
 
+if (
+  localStorage.getItem("preference") &&
+  localStorage.getItem("preference") === "dark"
+) {
+  console.log("Existe preferencia");
+  body.classList.add("dark");
+} else {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    localStorage.setItem("preference", "dark");
+    body.classList.add("dark");
+  }
+}
+
 items.forEach(function (_, index) {
   let div = document.createElement("div");
   div.classList.add("list-container");
@@ -96,7 +112,6 @@ function hideDeleteButton(ul, deleteButton) {
   ul.childNodes.forEach(function (item) {
     item.addEventListener("mouseleave", function () {
       deleteButton.classList.remove("visible");
-      deleteButton.classList.add("invisible");
     });
   });
 }
@@ -108,6 +123,7 @@ function deleteButtons(ul, index, deleteButton) {
 }
 function deleteItem(ul, index, deleteButton) {
   items[index] = items[index].filter(function (item, i) {
+    console.log(deleteButton.parentNode.parentNode);
     return (
       i !==
       [...deleteButton.parentNode.parentNode.children].indexOf(
@@ -132,7 +148,6 @@ function addDeleteButton(ul, deleteButton) {
     item.addEventListener("mouseover", function () {
       deleteButton.style.display = "flex";
       item.append(deleteButton);
-      deleteButton.classList.remove("invisible");
       deleteButton.classList.add("visible");
     });
   });

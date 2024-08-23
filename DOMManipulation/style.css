@@ -1,10 +1,11 @@
 #lists-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 5%;
   box-sizing: content-box;
   width: 100%;
 }
+
 li {
   list-style: none;
   display: flex;
@@ -51,6 +52,7 @@ span {
 header {
   display: flex;
   justify-content: center;
+  width: 100%s;
 }
 
 .fa-x {
@@ -93,6 +95,12 @@ main {
   margin-left: 30px;
   margin-top: 20px;
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(29, 28, 28);
+    color: rgb(221, 221, 221);
+  }
+}
 
 #toggle-button {
   border-radius: 50%;
@@ -103,12 +111,13 @@ main {
   align-items: center;
   position: absolute;
   right: 0;
-  margin-top: 50px;
-  margin-right: 60px;
+  margin-top: 58px;
+  margin-right: 8%;
   position: fixed;
 }
 h1 {
   padding: 40px 0;
+  margin-right: -8%;
 }
 
 .delete-button.visible {
@@ -170,4 +179,15 @@ body {
   align-items: center;
   margin-top: 10px;
   gap: 10px;
+}
+
+@media (min-width: 480px) {
+  #lists-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  #lists-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
