@@ -9,29 +9,21 @@
   <body class="dark">
     <header>
       <h1>To-Do list</h1>
+      <button id="toggle-button"><i class="fa-solid fa-moon"></i></button>
     </header>
     <main>
-      <div id="list-container">
-        <div id="first-list-container">
-          <span>First list</span>
-          <ul class="list"></ul>
-          <input placeholder="To-do" type="text" class="input" />
-          <button class="add-button">Add</button>
-          <button class="delete-button">
-            <i class="fa-solid fa-x"></i>
-          </button>
-        </div>
-        <div id="second-list-container">
-          <span>Second list</span>
-          <ul class="list"></ul>
-          <input placeholder="To-do" type="text" class="input" />
-          <button class="add-button">Add</button>
-          <button class="delete-button">
-            <i class="fa-solid fa-x"></i>
-          </button>
+      <div id="lists-container"></div>
+      <div class="alert">
+        <div class="alert-box">
+          <div class="alert-text">
+            <span>Are you sure?</span>
+          </div>
+          <div class="alert-buttons">
+            <button class="cancel">Cancel</button>
+            <button class="confirm">Confirm</button>
+          </div>
         </div>
       </div>
-      <button id="toggle-button">Dark Mode</button>
     </main>
   </body>
   <script src="https://kit.fontawesome.com/b89abaf60d.js"></script>
