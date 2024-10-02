@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       getRoles(data);
       getAllTable(data);
     })
-    .finally((loading.style.display = "none"));
+    .finally((loading.style.display = "none"))
+    .catch((error) => console.log(error));
 });
 
 function getRoles(data) {
